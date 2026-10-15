@@ -47,7 +47,7 @@ export function GroupDockerCompatibilityPermission({
       <Checkbox
         id={`docker-${groupId}`}
         checked={checked}
-        onCheckedChange={handleChange}
+        onCheckedChange={(v) => handleChange(v === true)}
         disabled={mutation.isPending}
       />
       <Label htmlFor={`docker-${groupId}`} className="cursor-pointer">
